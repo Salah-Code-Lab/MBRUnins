@@ -36,14 +36,12 @@ AND NOT:<br>partmgr<br>MBRFilterPP
 MAKE SURE that the value partmgr is ONLY <code>partmgr</code> without spaces and make sure of the value itself IT SHOULD NOT be empty at all!
 
 > Edge cases:<br> 
-> you may have other filters installed as well while this could cause issues but if so 
+> you may have other filters installed as well while this could cause issues but if so:<br> 
+> make sure the value is<br> 
+> partmgr<br>
+> (and other filters)
 
-make sure the value is<br> 
-partmgr<br>
-(and other filters)
-
-
-MBRFilterPP SHOULD NOT be in that list or value
+> MBRFilterPP SHOULD NOT be in that list or value
 
 
 5. after making sure the service and its components are removed properly you can reboot and you should be fine
