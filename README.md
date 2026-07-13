@@ -28,12 +28,12 @@ HKLM\SYSTEM\ControlSet001\Services<br>
 AND ITS SYMBOLIC LINK:<br>HKLM\SYSTEM\CurrentControlSet\Services
 
 and make sure that MBRFilterPP doesn't exist afterwards,<br>
-go to: 
+go to:<br>
 HKLM\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}<br>
 and make sure of UpperFilters value it should be only:<br>partmgr<br>
 AND NOT:<br>partmgr<br>MBRFilterPP
 
-MAKE SURE that the value partmgr is ONLY <code>partmgr</code> without spaces and make sure of the value itself IT SHOULD NOT be empty at all
+MAKE SURE that the value partmgr is ONLY <code>partmgr</code> without spaces and make sure of the value itself IT SHOULD NOT be empty at all!
 
 > Edge cases:<br> 
 > you may have other filters installed as well while this could cause issues but if so 
