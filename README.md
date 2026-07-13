@@ -40,4 +40,11 @@ and make sure of UpperFilters value it should be only: partmgr, AND NOT: partmgr
 
 MAKE SURE that the value partmgr is ONLY partmgr without spaces and make sure of the value itself IT SHOULD NOT be empty at all
 
+Edge cases: 
+you may have other filters installed as well while this could cause issues but if so 
+
+make sure the value is 
+partmgr
+(and other filters)
+MBRFilterPP SHOULD NOT be in that list or value
 5. after making sure the service and its components are removed properly you can reboot and you should be fine
