@@ -1,25 +1,41 @@
 This tool uninstalls MBRFilterPP 
 
-USAGE: 
-1-Open CMD in safe mode 
+Steps: 
+1.Download the executable from here or compile it yourself, then place it in a easy path say: 
+C:\MBRUnins.exe 
 
-2-run: C:\Path to the Executable
+2. Boot to WinRE then go to Troubleshoot > Advanced Options > Startup settings
+or you can do it Via bcdedit.exe with:
 
-and it will run to remove MBRFilterPP
+bcdedit /set {current} safeboot minimal
 
-Before rebooting Check the services key: 
+or you can boot with networking if you need to download the tool
 
-Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services
+bcdedit /set {current} safeboot network
 
-or 
+3. Open cmd.exe and type in: 
+X:\Path\to\executable.exe
 
-Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services
+few notes which are:
 
-make sure it is not there.
-Then go to: 
-Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}
+1. Change the Drive letter X: to where the Acutal executable lives
 
-and make sure that the UpperFilters key exist with the value being PartMgr 
-if 
-The MBRFilterPP entry doesn't exist in both 
-Then reboot and it should be removed with no issues
+2. you need the full path to executable say i have it in Users file 
+i would need to type in: C:\Users\MBRUnins.exe
+
+that is why i recommend just placing it in the root of C:\ drive for easier access, Oh don't forget to place the actual .exe
+
+extension and not just C:\MBRUnins (for example)
+
+4. after running the tool successfuly (Which only runs in safe mode)
+open regedit.exe and go to 
+HKLM\SYSTEM\ControlSet001\Services  AND ITS SYMBOLIC LINK   HKLM\SYSTEM\CurrentControlSet\Services
+
+and make sure that MBRFilterPP doesn't exist afterwards, 
+
+go to: 
+HKLM\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}
+
+and make sure of UpperFilters value it should be only: partmgr, AND NOT: partmgr MBRFilterPP
+
+5. after making sure the service and its components are removed properly you can reboot and you should be fine
