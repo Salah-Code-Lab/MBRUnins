@@ -22,8 +22,8 @@ X:\Path\to\executable.exe
 > That is why I recommend just placing it in the root of the C:\ drive for easier access. Oh, and don't forget to include the actual .exe extension and not just <code>C:\MBRUnins</code>!
 
 
-4. after running the tool successfuly <mark>(Which only runs in safe mode)</mark>
-open regedit.exe and go to:
+4. after running the tool successfuly <mark>(Which only runs in safe mode)</mark><br>
+open regedit.exe and go to:<br>
 HKLM\SYSTEM\ControlSet001\Services<br>
 AND ITS SYMBOLIC LINK:<br>HKLM\SYSTEM\CurrentControlSet\Services
 
