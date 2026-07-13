@@ -1,19 +1,17 @@
 This tool uninstalls MBRFilterPP 
 
 Steps: 
-1.Download the executable from here or compile it yourself, then place it in a easy path say: 
+1.Download the executable from here or compile it yourself, then place it in a easy path say:<br>
 C:\MBRUnins.exe 
 
-2. Boot to WinRE then go to Troubleshoot > Advanced Options > Startup settings > Restart > Safe Mode (Minimal or with networking doesn't matter)
-or you can do it Via bcdedit.exe with:
-
+2. Boot to WinRE then go to Troubleshoot > Advanced Options > Startup settings > Restart > Safe Mode (Minimal or with networking doesn't matter)<br>
+or you can do it Via bcdedit.exe with:<br>
 bcdedit /set {current} safeboot minimal
 
-or you can boot with networking if you need to download the tool
-
+or you can boot with networking if you need to download the tool<br>
 bcdedit /set {current} safeboot network
 
-3. Open cmd.exe and type in: 
+3. Open cmd.exe and type in:<br>
 X:\Path\to\executable.exe
 
 
@@ -24,25 +22,27 @@ X:\Path\to\executable.exe
 > That is why I recommend just placing it in the root of the C:\ drive for easier access. Oh, and don't forget to include the actual .exe extension and not just <code>C:\MBRUnins</code>!
 
 
-4. after running the tool successfuly (Which only runs in safe mode)
+4. after running the tool successfuly <mark>(Which only runs in safe mode)</mark>
 open regedit.exe and go to:
-HKLM\SYSTEM\ControlSet001\Services  AND ITS SYMBOLIC LINK:    HKLM\SYSTEM\CurrentControlSet\Services
+HKLM\SYSTEM\ControlSet001\Services<br>
+AND ITS SYMBOLIC LINK:<br>HKLM\SYSTEM\CurrentControlSet\Services
 
-and make sure that MBRFilterPP doesn't exist afterwards, 
-
+and make sure that MBRFilterPP doesn't exist afterwards,<br>
 go to: 
-HKLM\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}
+HKLM\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}<br>
+and make sure of UpperFilters value it should be only:<br>partmgr<br>
+AND NOT:<br>partmgr<br>MBRFilterPP
 
-and make sure of UpperFilters value it should be only: partmgr, AND NOT: partmgr MBRFilterPP
+MAKE SURE that the value partmgr is ONLY <code>partmgr</code> without spaces and make sure of the value itself IT SHOULD NOT be empty at all
 
-MAKE SURE that the value partmgr is ONLY partmgr without spaces and make sure of the value itself IT SHOULD NOT be empty at all
+> Edge cases:<br> 
+> you may have other filters installed as well while this could cause issues but if so 
 
-Edge cases: 
-you may have other filters installed as well while this could cause issues but if so 
-
-make sure the value is 
-partmgr
+make sure the value is<br> 
+partmgr<br>
 (and other filters)
+
+
 MBRFilterPP SHOULD NOT be in that list or value
 
 
