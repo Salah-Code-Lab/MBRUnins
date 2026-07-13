@@ -28,8 +28,8 @@ that is why i recommend just placing it in the root of C:\ drive for easier acce
 extension and not just C:\MBRUnins (for example)
 
 4. after running the tool successfuly (Which only runs in safe mode)
-open regedit.exe and go to 
-HKLM\SYSTEM\ControlSet001\Services  AND ITS SYMBOLIC LINK   HKLM\SYSTEM\CurrentControlSet\Services
+open regedit.exe and go to:
+HKLM\SYSTEM\ControlSet001\Services  AND ITS SYMBOLIC LINK:    HKLM\SYSTEM\CurrentControlSet\Services
 
 and make sure that MBRFilterPP doesn't exist afterwards, 
 
