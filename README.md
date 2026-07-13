@@ -17,12 +17,12 @@ bcdedit /set {current} safeboot network
 X:\Path\to\executable.exe
 
 
-<sub>
-<strong>Few notes to keep in mind:</strong><br><br>
-1. Change the Drive letter X: to where the actual executable lives.<br>
-2. You need the full path to the executable. For example, if you have it in your Users folder, you would need to type: <code>C:\Users\MBRUnins.exe</code><br><br>
-That is why I recommend just placing it in the root of the <code>C:\</code> drive for easier access. Oh, and don't forget to include the actual <code>.exe</code> extension and not just <code>C:\MBRUnins</code>!
-</sub>
+
+> Few notes to keep in mind:
+> 1. Change the Drive letter X: to where the actual executable lives.<br>
+> 2. You need the full path to the executable. For example, if you have it in your Users folder, you would need to type: <code>C:\Users\MBRUnins.exe</code><br>
+> That is why I recommend just placing it in the root of the <code>C:\</code> drive for easier access.<br> Oh, and don't forget to include the actual <code>.exe</code> extension and not just <code>C:\MBRUnins</code>!
+
 
 4. after running the tool successfuly (Which only runs in safe mode)
 open regedit.exe and go to:
