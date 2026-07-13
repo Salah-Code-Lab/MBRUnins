@@ -4,7 +4,7 @@ Steps:
 1.Download the executable from here or compile it yourself, then place it in a easy path say: 
 C:\MBRUnins.exe 
 
-2. Boot to WinRE then go to Troubleshoot > Advanced Options > Startup settings
+2. Boot to WinRE then go to Troubleshoot > Advanced Options > Startup settings > Restart > Safe Mode (Minimal or with networking doesn't matter)
 or you can do it Via bcdedit.exe with:
 
 bcdedit /set {current} safeboot minimal
@@ -37,5 +37,7 @@ go to:
 HKLM\SYSTEM\ControlSet001\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}
 
 and make sure of UpperFilters value it should be only: partmgr, AND NOT: partmgr MBRFilterPP
+
+MAKE SURE that the value partmgr is ONLY partmgr without spaces and make sure of the value itself IT SHOULD NOT be empty at all
 
 5. after making sure the service and its components are removed properly you can reboot and you should be fine
